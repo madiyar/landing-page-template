@@ -94,9 +94,6 @@
   // menu
   .menu {
     @apply flex flex-col items-center pt-14 mt-14;
-    & .subtitle {
-      @apply max-w-prose mx-auto text-center mt-6 mb-14 text-secondary text-opacity-70;
-    }
     & .items {
       @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12;
       & .card {
@@ -146,6 +143,34 @@
       }
       & .image {
         @apply hidden lg:block w-1/3 transform scale-110 -my-8;
+      }
+    }
+  }
+  // testimonial
+  .testimonial {
+    @apply flex flex-col items-center pt-14 mt-14 pb-28;
+    & h2 {
+      @apply text-center;
+    }
+    & .slider {
+      @apply flex items-center px-0 md:px-9 max-w-3xl mx-auto;
+      & .content {
+        @apply flex-1 w-full flex flex-col items-center px-4 md:px-24;
+        & img {
+          @apply rounded-full;
+        }
+        & p {
+          @apply text-center text-black leading-6 mt-11 mb-5;
+        }
+        & .stars {
+          @apply flex items-center;
+        }
+        & h3 {
+          @apply uppercase mt-8 font-sans font-normal leading-4 text-black;
+        }
+        & h4 {
+          @apply uppercase mt-2 font-sans font-normal leading-3 text-sm text-black text-opacity-70;
+        }
       }
     }
   }
@@ -199,6 +224,9 @@
   }
   .title {
     @apply font-bold text-3xl leading-8;
+  }
+  .subtitle {
+    @apply max-w-prose mx-auto text-center mt-6 mb-14 text-secondary text-opacity-70;
   }
   .btn {
     @apply inline-flex items-center justify-center font-medium px-6 py-3 rounded-md focus:ring-4 focus:ring-primary focus:ring-opacity-20;
