@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply container mx-auto flex items-center w-full justify-between py-4 px-6;
+  }
+  .btn-primary {
+    @apply text-white font-normal bg-primary px-6 py-3 rounded-md;
+  }
+}
