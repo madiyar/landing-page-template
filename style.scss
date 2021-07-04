@@ -3,11 +3,57 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply text-secondary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
 @layer components {
   .header {
-    @apply container mx-auto flex items-center w-full justify-between py-4 px-6;
+    @apply flex items-center w-full justify-between py-8;
+    & .nav {
+      @apply flex items-stretch;
+      & .links {
+        @apply hidden md:flex md:items-stretch font-medium ml-6 lg:ml-10;
+        & a {
+          @apply flex items-center justify-center px-5;
+          @apply opacity-60;
+          @apply hover:text-primary hover:opacity-100;
+        }
+      }
+    }
   }
-  .btn-primary {
-    @apply text-white font-normal bg-primary px-6 py-3 rounded-md;
+  .hero {
+    @apply flex items-center mt-10 lg:mt-0 justify-between;
+    & .action {
+      @apply w-full lg:w-5/12;
+      & h1 {
+        @apply text-5xl font-bold mb-10;
+      }
+      & p {
+        @apply font-medium mb-11 leading-6;
+      }
+    }
+    & .image {
+      @apply w-1/2 hidden lg:flex justify-end;
+      & img {
+        @apply object-contain;
+      }
+    }
+  }
+  .btn {
+    @apply font-medium px-6 py-3 rounded-md;
+    &-primary {
+      @apply btn;
+      @apply text-white bg-primary hover:bg-primaryDark;
+    }
+    &-default {
+      @apply btn;
+      @apply text-primary bg-white border border-primary border-solid border-opacity-10 hover:bg-primary hover:bg-opacity-5;
+    }
   }
 }
