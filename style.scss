@@ -122,6 +122,25 @@
       }
     }
   }
+  // contact
+  .contact {
+    @apply bg-primary bg-opacity-10;
+    & .container {
+      @apply flex flex-col items-center py-28 max-w-3xl;
+      & h2 {
+        @apply text-center;
+      }
+      & form {
+        @apply bg-white rounded-xl mt-11 flex items-center h-20 w-full;
+        & input {
+          @apply h-full px-6 py-3 bg-transparent focus:outline-none flex-1 text-lg;
+        }
+        & button {
+          @apply h-20 px-14 text-lg;
+        }
+      }
+    }
+  }
   // footer
   footer {
     @apply bg-dark;
