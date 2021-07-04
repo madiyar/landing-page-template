@@ -122,6 +122,31 @@
       }
     }
   }
+  // footer
+  footer {
+    @apply bg-dark;
+    & .container {
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-32 pb-24 gap-x-8;
+      & .item {
+        @apply flex flex-col mb-10 lg:mb-0;
+        & .logo {
+          @apply w-16 mb-6;
+        }
+        & h3 {
+          @apply font-bold text-lg leading-5 text-white mb-6;
+        }
+        & a {
+          @apply text-white text-opacity-70 text-sm mb-4 hover:text-opacity-100;
+        }
+        & .socials {
+          @apply flex items-center gap-x-4;
+          & a {
+            @apply opacity-70 hover:opacity-100;
+          }
+        }
+      }
+    }
+  }
   // common
   .section-name {
     @apply text-primary text-opacity-70 uppercase font-medium leading-5 tracking-widest mb-2 block;
