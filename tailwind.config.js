@@ -8,6 +8,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      borderRadius: {
+        large: '4.688rem'
+      },
       colors: {
         primary: '#DC780B',
         primaryDark: '#c76c09',

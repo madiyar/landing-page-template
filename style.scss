@@ -52,7 +52,7 @@
   }
   // features
   .features {
-    @apply flex flex-col items-center mt-20 lg:mt-0;
+    @apply flex flex-col items-center pt-28 lg:pt-10;
     & .list {
       @apply flex w-full gap-x-20 mt-11 flex-col md:flex-row;
       & .card {
@@ -71,7 +71,7 @@
   }
   // about us
   .about-us {
-    @apply flex items-start lg:items-center mt-28 relative;
+    @apply flex items-start lg:items-center pt-14 mt-14 relative;
     & .image {
       @apply w-1/2 hidden md:flex justify-start z-10;
       & img {
@@ -91,6 +91,37 @@
       }
     }
   }
+  // menu
+  .menu {
+    @apply flex flex-col items-center pt-14 mt-14;
+    & .subtitle {
+      @apply max-w-prose mx-auto text-center mt-6 mb-14 text-secondary text-opacity-70;
+    }
+    & .items {
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12;
+      & .card {
+        @apply border border-black border-opacity-10 rounded-xl rounded-tl-large hover:shadow-lg;
+        & .img {
+          @apply rounded-tl-large rounded-br-large rounded-tr-xl w-full;
+        }
+        & h3 {
+          @apply font-bold text-2xl leading-6 flex justify-between items-center p-6;
+        }
+        & p {
+          @apply font-normal leading-6 text-secondary text-opacity-70 px-6;
+        }
+        & .action {
+          @apply p-6 flex justify-between items-center;
+          & button {
+            @apply px-3 py-3;
+          }
+          & .stars {
+            @apply flex items-center;
+          }
+        }
+      }
+    }
+  }
   // common
   .section-name {
     @apply text-primary text-opacity-70 uppercase font-medium leading-5 tracking-widest mb-2 block;
@@ -99,7 +130,7 @@
     @apply font-bold text-3xl leading-8;
   }
   .btn {
-    @apply font-medium px-6 py-3 rounded-md;
+    @apply font-medium px-6 py-3 rounded-md focus:ring-4 focus:ring-primary focus:ring-opacity-20;
     &-primary {
       @apply btn;
       @apply text-white bg-primary hover:bg-primaryDark;
