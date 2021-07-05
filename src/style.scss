@@ -15,15 +15,24 @@
 @layer components {
   // header
   .header {
-    @apply flex items-center w-full justify-between py-8;
+    @apply flex items-start md:items-center w-full justify-between py-8;
     & .nav {
-      @apply flex items-stretch;
+      @apply flex flex-col-reverse items-stretch justify-end relative;
+      @apply md:flex-row md:flex-1 md:justify-between;
       & .links {
-        @apply hidden md:flex md:items-stretch font-medium ml-6 lg:ml-10;
+        @apply font-medium absolute right-0 top-14 left-0 bg-white shadow-2xl rounded-md;
+        @apply md:flex md:items-stretch md:static md:shadow-none;
         & a {
-          @apply flex items-center justify-center px-5;
+          @apply flex items-center px-5 py-3;
+          @apply md:justify-center md:py-0;
           @apply opacity-60;
           @apply hover:text-primary hover:opacity-100;
+        }
+      }
+      & .buttons {
+        @apply flex;
+        & .btn-default {
+          @apply block ml-2 md:hidden;
         }
       }
     }
