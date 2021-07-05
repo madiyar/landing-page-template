@@ -183,12 +183,12 @@
         @apply text-center;
       }
       & form {
-        @apply bg-white rounded-xl mt-11 flex items-center h-20 w-full;
+        @apply bg-white rounded-xl mt-11 flex items-center h-auto sm:h-20 w-full;
         & input {
-          @apply h-full px-6 py-3 bg-transparent focus:outline-none flex-1 text-lg;
+          @apply h-full pl-6 pr-0 sm:pr-6 py-3 bg-transparent focus:outline-none flex-1 text-lg;
         }
         & button {
-          @apply h-20 px-14 text-lg;
+          @apply h-auto sm:h-20 sm:px-14 text-lg ;
         }
       }
     }
