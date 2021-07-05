@@ -1,14 +1,14 @@
 
-// @layer base {
+@layer base {
   body {
     @apply text-secondary;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
-// }
+}
 
-// @layer components {
+@layer components {
   // header
   .header {
     @apply flex items-center w-full justify-between py-8;
@@ -239,4 +239,4 @@
       @apply bg-secondary text-white hover:bg-opacity-90 mr-8;
     }
   }
-// }
+}
