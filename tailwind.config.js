@@ -21,9 +21,7 @@ module.exports = {
         secondary: '#150C01',
         dark: '#252525',
         white: 'white',
-        gray: '#EDEDED',
-        feature1: '#8FA632',
-        feature2: '#E64D2E'
+        gray: '#EDEDED'
       },
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
